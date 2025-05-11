@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre Noi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 200px;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #demo {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+        }
+        .links a {
+            margin-right: 15px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Despre Noi</h1>
+        <p>Bună! Suntem o echipă pasionată de tehnologie și educație, dedicată creării de soluții inovatoare. Ne place să învățăm continuu și să împărtășim cunoștințele noastre cu ceilalți.</p>
+        
+        <img src="https://via.placeholder.com/200" alt="Poza echipei">
+
+        <h2>Studii</h2>
+        <table>
+            <tr>
+                <th>Instituție</th>
+                <th>Specializare</th>
+                <th>Perioada</th>
+            </tr>
+            <tr>
+                <td>Universitatea Politehnica București</td>
+                <td>Informatică</td>
+                <td>2015-2019</td>
+            </tr>
+            <tr>
+                <td>Universitatea din București</td>
+                <td>Master AI</td>
+                <td>2019-2021</td>
+            </tr>
+            <tr>
+                <td>Curs Online Coursera</td>
+                <td>Machine Learning</td>
+                <td>2022</td>
+            </tr>
+        </table>
+
+        <h2>Linkuri Relevante</h2>
+        <div class="links">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://www.coursera.org" target="_blank">Coursera</a>
+        </div>
+
+        <h2>Informații Suplimentare</h2>
+        <div class="buttons">
+            <button onclick="showInfo(1)">Info 1</button>
+            <button onclick="showInfo(2)">Info 2</button>
+            <button onclick="showInfo(3)">Info 3</button>
+        </div>
+        <p id="demo">Aici vor apărea informațiile selectate.</p>
+    </div>
+
+    <script>
+        function showInfo(infoId) {
+            const demo = document.getElementById('demo');
+            switch(infoId) {
+                case 1:
+                    demo.innerText = "Suntem specializați în dezvoltarea de aplicații web folosind tehnologii moderne precum HTML, CSS și JavaScript.";
+                    break;
+                case 2:
+                    demo.innerText = "Am participat la mai multe hackathoane, obținând premii pentru soluții inovatoare în domeniul educației.";
+                    break;
+                case 3:
+                    demo.innerText = "Colaborăm cu ONG-uri pentru a promova educația STEM în comunitățile defavorizate.";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
