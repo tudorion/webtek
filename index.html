@@ -66,6 +66,15 @@
         .links a:hover {
             text-decoration: underline;
         }
+
+        #cod {
+            background-color: #e8f5e9;
+            margin-right: 30px;
+        }
+
+        code {
+            background-color: #e8f5e9;
+        }
     </style>
 </head>
 <body>
@@ -112,7 +121,139 @@
             <button onclick="showInfo(2)">Info 2</button>
             <button onclick="showInfo(3)">Info 3</button>
         </div>
+
         <p id="demo">Aici vor apărea informațiile selectate.</p>
+    
+
+    <div>
+        <h2>Variabile</h2>
+        <p>Variabilele sunt aliasuri pentru adresele din memorie unde sunt stocate diverse data</p>
+        <p> Se declara cu <code> var(deprecated), let, const</code> sau in mod automat
+            <p id="cod">
+                <code>
+                    var x = 5; <br>
+                    let x = 5; <br>
+                    const x = 5; <br>
+                </code>
+            </p>
+
+            <p>
+
+               <h4> When to Use var, let, or const?</h4>
+               <ol>
+                    <li>Always declare variables</li>
+                    <li>Always use const if the value should not be changed</li>
+                    <li>Always use const if the type should not be changed (Arrays and Objects)</li>
+                    <li>Only use let if you can't use const</li>
+                    <li>Only use var if you MUST support old browsers.</li>
+                </ol>
+
+            </p>
+
+
+        <p>Clasificate dupa declararea lor si segmentul de cod care poate sa le apeleze (scope), variabilele pot fi:
+        <ul>
+            <li><b>local</b>: Variables declared within a JavaScript function, are LOCAL to the function</br> 
+                <p id="cod">
+                    <code>// code here can NOT use carName </br>
+                        </br>
+                        function myFunction() {</br>
+                        let carName = "Volvo";</br>
+                         // code here CAN use carName</br>
+                        }</br>
+                        </br>
+                        // code here can NOT use carName </br>
+                    </code>
+                </p>
+            </li>
+            
+            <li><b>Global</b> A variable declared outside a function, becomes GLOBAL.
+
+            </li>
+            <li><b>block</b> ES6 introduced two important new JavaScript keywords: <code>let</code> and <code>const</code>. <br> These two keywords provide Block Scope in JavaScript.<br>Variables declared inside a <code>{ }</code> block cannot be accessed from outside the block</li>
+        </ul>
+        </p>
+
+        <h2>Conditional statements</h2>
+        <p>Conditional statements are used to perform different actions based on different conditions.</p>
+
+        <p>In JavaScript we have the following conditional statements:</p>
+
+        <ul>
+            <li>Use <code>if</code> to specify a block of code to be executed, if a specified condition is true
+                <p id="cod">
+                    <code>if (hour < 18) { <br>
+                          greeting = "Good day";<br>
+                          } 
+                    </code>
+                </p>
+                   <p> va afisa  <code>Good day</code></p>
+            </li>
+            
+            <li>Use <code >else</code> to specify a block of code to be executed, if the same condition is false
+                <p id="cod">
+                    <code>if (hour < 18) { <br>
+                          greeting = "Good day";<br>
+                          } else {<br>
+                            greeting = "Good evening" <br>
+                          }
+                    </code>
+                </p>
+                
+                <p> va afisa  <code>Good day</code> daca <code>hour</code> este mai mica de 18, altfel va afisa <code>Good evening</code>
+                </p>
+            </li>
+            
+            <li>Use <code>else if</code> to specify a new condition to test, if the first condition is false
+                <p id="cod">
+                    <code>if (time < 10) { <br>
+                          greeting = "Good morning";<br>
+                          } else if (time < 20) { <br>
+                            greeting = "Good day"; <br>
+                          } else { <br>
+                            greeting = "Good evening"; <br>
+                          }
+                    </code>
+                </p>
+
+            </li>
+
+            <li>Use <code>switch</code> to specify many alternative blocks of code to be executed
+                <p id="cod">
+                    <code>
+                        let day;<br>
+                        switch (new Date().getDay()) {<br>
+                          case 0:<br>
+                            day = "Sunday";<br>
+                            break;<br>
+                          case 1:<br>
+                            day = "Monday";<br>
+                            break;<br>
+                          case 2:<br>
+                            day = "Tuesday";<br>
+                            break;<br>
+                          case 3:<br>
+                            day = "Wednesday";<br>
+                            break;<br>
+                          case 4:<br>
+                            day = "Thursday";<br>
+                            break;<br>
+                          case 5:<br>
+                            day = "Friday";<br>
+                            break;<br>
+                          case  6:<br>
+                            day = "Saturday";<br>
+                        }<br>
+                        document.getElementById("demo").innerHTML = "Today is " + day;<br>
+                    </code>
+
+                </p>
+                Va afisa ziua saptamanii
+
+            </li>
+        </ul>
+    </div>
+
     </div>
 
     <script>
