@@ -11,8 +11,8 @@ Creati o pagina in care:
 
 Tema 2
 
-Variabile
-Operatori
-Statements:
-  - IF/Else
-  - Try/Catch/finally
+- Variabile
+- Operatori
+- Statements:
+    - IF/Else
+    - Try/Catch/finally
